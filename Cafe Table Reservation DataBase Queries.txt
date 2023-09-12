@@ -1,0 +1,46 @@
+ADMIN QUERY
+CREATE TABLE `admin` (
+  `admin_id` int NOT NULL AUTO_INCREMENT,
+  `admin_address` varchar(255) DEFAULT NULL,
+  `admin_email` varchar(255) DEFAULT NULL,
+  `admin_mobilenumber` varchar(255) DEFAULT NULL,
+  `admin_name` varchar(255) NOT NULL,
+  `admin_password` varchar(255) DEFAULT NULL,
+  `admin_username` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`admin_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+USER QUERY
+CREATE TABLE `user` (
+  `user_id` int NOT NULL AUTO_INCREMENT,
+  `user_address` varchar(255) DEFAULT NULL,
+  `user_email` varchar(255) DEFAULT NULL,
+  `user_mobilenumber` varchar(255) DEFAULT NULL,
+  `user_name` varchar(255) NOT NULL,
+  `user_password` varchar(255) DEFAULT NULL,
+  `user_username` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+MENU QUERY
+CREATE TABLE `menu` (
+  `menu_id` bigint NOT NULL AUTO_INCREMENT,
+  `description` varchar(255) DEFAULT NULL,
+  `item_price` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`menu_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+BOOKTABLE QUERY
+CREATE TABLE `booking` (
+  `book_table_id` int NOT NULL AUTO_INCREMENT,
+  `book_availability` varchar(255) DEFAULT NULL,
+  `book_capacity` int DEFAULT NULL,
+  `book_confirmation` varchar(255) DEFAULT NULL,
+  `book_date` varchar(255) DEFAULT NULL,
+  `book_time` varchar(255) DEFAULT NULL,
+  `book_type` varchar(255) DEFAULT NULL,
+  `user_id` int DEFAULT NULL,
+  PRIMARY KEY (`book_table_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
